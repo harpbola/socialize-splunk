@@ -6,7 +6,7 @@ import requests
 from defs import log
 
 log( 'sys.argv: %s' % sys.argv )
-saved_search_title = ''
+saved_search_title = 'script-called-directly'
 try:
     number_of_events = sys.argv[1]
     search_terms = sys.argv[2]
