@@ -1,0 +1,6 @@
+chardet
+certifi
+simplejson
+httplib2
+requests
+requests-oauth
