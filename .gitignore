@@ -1,3 +1,11 @@
 *.pyc 
 /.project*
 /.pydevproject
+/.settings
+
+_pip_cache
+build
+distribute-0.6.15.tar.gz
+pyenv
+
+local_settings.py
