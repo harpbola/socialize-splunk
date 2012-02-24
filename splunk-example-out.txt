@@ -1,3 +1,0 @@
-sys.argv: ['C:\\Users\\Harp\\Desktop\\AppMakr\\webapp\\SocializeSplunk\\developer_notify.py']
-Response status: 202
-Response content: None
