@@ -1,4 +1,3 @@
-#! python
 from settings import *
 import simplejson, sys
 from oauth_hook import OAuthHook
