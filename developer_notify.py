@@ -29,11 +29,11 @@ oauth_hook = OAuthHook('', '', header_auth=True)
 
 # Create message
 if saved_search_title == '[PROD] Error - Internal Server - 5 min':
-    message = '%d ERRORS in last 5 mins.' % (number_of_events)
+    message = '%s ERRORS in last 5 mins.' % (number_of_events)
 elif saved_search_title == '[PROD] Access - 1 hour':
-    message = 'Only %d requests in last hour. Kinda slow.' % (number_of_events)
+    message = 'Only %s requests in last hour. Kinda slow.' % (number_of_events)
 else:
-    message = saved_search_title
+    message = alert_reason
     
 # do it
 url = "%s/application/%d/notification/" % (PARTNER_API_BASE, APPLICATION_ID)
