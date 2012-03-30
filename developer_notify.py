@@ -25,7 +25,7 @@ def handle_search(kwargs):
     if saved_search_title == '[PROD] Error - Internal Server - 5 min':
         message = '%s ERRORS in last 5 mins.' % ( kwargs['number_of_events'])
         
-    elif saved_search_title == 'Summary -- HTTP by Hour':
+    elif saved_search_title == 'Summary -- HTTP by Hour' or  saved_search_title == 'Summary -- HTTP by minute':
         entity_key = 'http-requests'
         search_data = read_search(kwargs['search_file_path'])
         log( "search_data: %s" % search_data)
