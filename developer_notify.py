@@ -15,11 +15,13 @@ try:
     search_file_path = sys.argv[8]
     
     log(  '''
-        number_of_events : %s
-        search_terms : %s
-        saved_search_title : %s
-        alert_reason : %s
-    ''' % (number_of_events, search_terms, saved_search_title, alert_reason) )
+        number_of_events : '%(number_of_events)s'
+        search_terms : '%(search_terms)s'
+        saved_search_title : '%(saved_search_title)s'
+        alert_reason : '%(alert_reason)s'
+        search_url : '%(search_url)s'
+        search_file_path : '%(search_file_path)s'
+    ''' % locals() )
 except IndexError:
     pass
     
@@ -30,7 +32,9 @@ if saved_search_title == '[PROD] Error - Internal Server - 5 min':
 elif saved_search_title == '[PROD] Access - 1 hour':
     message = 'Only %s requests in last hour. Kinda slow.' % (number_of_events)
 elif saved_search_title == 'Summary -- HTTP by minute':
+    entity_key = 'http-requests'
     search_data = read_search(search_file_path)
+    log( "search_data: %s" % search_data)
     message = str(search_data[0])
 else:
     message = alert_reason
