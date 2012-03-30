@@ -47,4 +47,4 @@ def test_read_search():
     assert len(content) > 1
     assert (content[0]['success_count'] == '1573')
     
-#test_read_search()
+test_read_search()

@@ -1,9 +1,9 @@
 from settings import *
 from oauth_hook import OAuthHook
 import requests
-from defs import log
 import gzip, csv
 import simplejson
+from logging_helper import log
 
 def read_gz(file_path):
     f = gzip.GzipFile(fileobj=open(file_path, 'rb'))
