@@ -36,6 +36,15 @@ def handle_search(kwargs):
             % search_data[0]
         post_comment(entity_key, message)
         
+    elif saved_search_title == 'Summary -- NOTIFY by 15 minute':
+        entity_key = 'notifications'
+        search_data = read_search(kwargs['search_file_path'])
+        log( "search_data: %s" % search_data)
+        message = "Android Devices: %(total_android_devices)s \n"\
+            "iOS Devices: %(total_ios_devices)s\n"\
+            % search_data[0]
+        post_comment(entity_key, message)
+        
     else:
         message = alert_reason
         post_comment(entity_key, message)
