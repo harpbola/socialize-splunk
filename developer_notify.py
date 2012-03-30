@@ -1,6 +1,6 @@
 #!/opt/splunk/bin/scripts/socialize-splunk/pyenv/bin/python
 import sys
-from logging_helper import log
+from logging_helper import log, L
 from helper import post_comment, read_search
 
 def argv_to_dict(argv):
@@ -41,6 +41,12 @@ def handle_search(kwargs):
         post_comment(entity_key, message)
     log( 'locals: %s' % locals())
         
+def main():
+    try:
+        argv = argv_to_dict(sys.argv)
+        handle_search(argv)
+    except Exception, e:
+        L.exception(e)
+        log(e)        
 if __name__ == "__main__":
-    argv = argv_to_dict(sys.argv)
-    handle_search(argv)
+    main()

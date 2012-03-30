@@ -1,4 +1,4 @@
-from developer_notify import argv_to_dict, handle_search
+from developer_notify import argv_to_dict, handle_search, main
 
 sample_local_argv = [
     '/opt/splunk/bin/scripts/notify.py', 
@@ -27,4 +27,11 @@ def test_handle_search():
     argv = argv_to_dict(sample_local_argv)
     handle_search(argv)
     
-test_handle_search()
+#test_handle_search()
+
+#===============================================================================
+# main
+#===============================================================================
+def test_main():
+    main()
+test_main()    
