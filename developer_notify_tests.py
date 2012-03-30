@@ -27,11 +27,11 @@ def test_handle_search():
     argv = argv_to_dict(sample_local_argv)
     handle_search(argv)
     
-#test_handle_search()
+test_handle_search()
 
 #===============================================================================
 # main
 #===============================================================================
 def test_main():
     main()
-test_main()    
+#test_main()    

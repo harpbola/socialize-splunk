@@ -25,7 +25,9 @@ def csv_to_dict(file_path):
     return content
     
 def read_search(file_path):
+    data = read_gz(file_path)
     csv_file_path = file_path.replace('results.csv.gz', 'results_preview.csv')
+    open(csv_file_path, 'w').write(data)
     return csv_to_dict(csv_file_path)
         
 def make_partner_request(sub_url, payload):
