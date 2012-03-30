@@ -39,6 +39,7 @@ def handle_search(kwargs):
     else:
         message = alert_reason
         post_comment(entity_key, message)
+    log( 'locals: %s' % locals)
         
 if __name__ == "__main__":
     argv = argv_to_dict(sys.argv)
