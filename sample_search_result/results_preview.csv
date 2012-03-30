@@ -1,0 +1,3 @@
+"date_year","date_month","date_mday","date_wday","date_hour","date_minute","average_reponse_time","p80_reponse_time","request_count","success_count","failure_count","error_count","android_count","ios_count","__mv_date_year","__mv_date_month","__mv_date_mday","__mv_date_wday","__mv_date_hour","__mv_date_minute","__mv_average_reponse_time","__mv_p80_reponse_time","__mv_request_count","__mv_success_count","__mv_failure_count","__mv_error_count","__mv_android_count","__mv_ios_count"
+2012,march,30,friday,19,17,"0.056671","0.061",1667,1573,73,0,926,347,,,,,,,,,,,,,,
+2012,march,30,friday,19,18,"0.072747","0.070",597,568,24,0,298,134,,,,,,,,,,,,,,
